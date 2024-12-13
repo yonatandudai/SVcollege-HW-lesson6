@@ -78,6 +78,13 @@ function performOperation(total, number, operator) {
     if (operator === '+') return total + number;
     if (operator === '-') return total - number;
     if (operator === '*') return total * number;
-    if (operator === '/') return number === 0 ? 'Error' : total / number;
+    if (operator === '/'){
+        if (number === 0){
+            return 'Error';
+        }
+        else{
+            return total/number;
+        }
+    }
     return total;
 }
